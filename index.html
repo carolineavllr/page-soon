@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/stylesheets/style.css">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+
+<body>
+
+  <div class="wrapper mx-auto shadow rounded mt-5">
+    <div class="row pl-5">
+      <div class="col-sm px-5 py-5 w-75">
+        <div class="logo">
+          <img src="./images/logo.svg">
+        </div>
+        <div class="title text-uppercase">
+          <p class="font-weight-light mb-0 mt-5">We're </p>
+          <p>
+            coming soon
+          </p>
+        </div>
+        <div class="text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </div>
+
+        <form class="position-relative needs-validation" novalidate>
+          <div class="form-group">
+            <input type="email" class="form-control shadow font-weight-light mt-5" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Seu email" required>
+            <div class="invalid-feedback mt-2">
+              Please provide a valid email.
+              <img src="./images/icon-error.svg">
+            </div>
+            <div class="valid-feedback mt-2">
+              Ok!
+            </div>
+          </div>
+          <button type="submit" class="btn position-absolute"><img src="./images/icon-arrow.svg"></button>
+        </form>
+      </div>
+      <div class="col-sm w-25">
+        <img src="./images/hero-desktop.jpg" class="w-100">
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p class="attribution text-center mt-5">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/carolineavllr">Caroline Avellar</a>.
+    </p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+        var forms = document.getElementsByClassName('needs-validation');
+        // Faz um loop neles e evita o envio
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>
