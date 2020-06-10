@@ -10,6 +10,7 @@ body {
 
 .title {
   font-size: 60px;
+  letter-spacing: 10px;
 }
 
 p.font-weight-light.mb-0.mt-5,
